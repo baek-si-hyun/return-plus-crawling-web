@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import History from "./History";
 
 function Main() {
   const [selectBox, setSelectBox] = useState(false);
@@ -25,27 +26,23 @@ function Main() {
     setSelectItem(data);
   };
 
-  useEffect(() => {
-    console.log(selectItem);
-  }, [selectItem]);
-
   return (
     <div
-      className="flex justify-center w-screen h-screen text-white bg-gray-900 bg-center bg-cover"
+      className="flex justify-center w-screen h-screen overflow-hidden text-white bg-gray-900 bg-center bg-cover"
       // style={{
-      //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://imagedelivery.net/4aEUbX05h6IovGOQjgkfSw/ae9dc6a0-72bb-44b3-d8d1-f7e1c15e1a00/public')`,
+      //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://imagedelivery.net/4aEUbX05h6IovGOQjgkfSw/ae9dc6a0-72bb-44b3-d8d1-f7e1c15e1a00/public')`,
       // }}
     >
-      <div className="flex-col items-center mt-48">
+      <div className="flex flex-col items-center gap-12 mt-24">
         <h1
-          className="font-semibold tracking-wide text-7xl"
+          className="font-semibold tracking-wide text-center text-8xl"
           style={{
             textShadow: "0px 0px 20px rgba(0, 0, 0, 0.9)",
           }}
         >
           ReturnPlus Web Crawler
         </h1>
-        <div className="flex">
+        <div className="flex justify-center ">
           <button
             id="dropdownDelayButton"
             data-dropdown-toggle="dropdownDelay"
@@ -75,7 +72,7 @@ function Main() {
             <div
               className={`${
                 selectBox ? "" : "hidden"
-              } absolute top-10 left-0 pt-2`}
+              } absolute top-10 left-0 pt-2 z-10`}
             >
               <div
                 id="dropdownDelay"
@@ -102,6 +99,7 @@ function Main() {
           </button>
           <Outlet />
         </div>
+        <History />
       </div>
     </div>
   );

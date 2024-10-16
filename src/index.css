@@ -11,6 +11,11 @@
   h1 {
     font-family: "Apercu", sans-serif;
   }
+  button,
+  select,
+  input {
+    font-family: "Pretendard", sans-serif;
+  }
   /* 스크롤바 트랙 색상 */
   ::-webkit-scrollbar {
     width: 0.4rem;
