@@ -15,14 +15,14 @@ function History() {
               <tr className="border-b border-gray-500">
                 <th className="px-4 py-2 text-left ">파일명</th>
                 <th className="px-4 py-2 text-left ">검색어</th>
-                <th className="px-4 py-2 text-left ">페이지 수</th>
+                <th className="px-4 py-2 text-left ">데이터 수</th>
                 <th className="px-4 py-2 text-left ">다운로드 시간</th>
                 <th className="px-4 py-2 text-left ">액션</th>
               </tr>
             </thead>
             <tbody className="">
-              {history.map((record, i) => (
-                <HistoryItem key={i} record={record} />
+              {history.map((record) => (
+                <HistoryItem key={record.download_time} record={record} />
               ))}
             </tbody>
           </table>

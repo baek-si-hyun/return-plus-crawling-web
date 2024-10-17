@@ -8,8 +8,15 @@ const loadFromLocalStorage = () => {
       return [];
     }
     const parsedData = JSON.parse(serializedState);
+
+    // 다운로드 기록에 data_count가 없는 경우 기본값 설정
+    const updatedData = parsedData.map((record) => ({
+      ...record,
+      data_count: record.data_count !== undefined ? record.data_count : 0,
+    }));
+
     // 다운로드 시간을 기준으로 내림차순 정렬
-    return parsedData.sort((a, b) => new Date(b.download_time) - new Date(a.download_time));
+    return updatedData.sort((a, b) => new Date(b.download_time) - new Date(a.download_time));
   } catch (e) {
     console.warn("Could not load download history from localStorage", e);
     return [];
