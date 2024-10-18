@@ -231,7 +231,7 @@ function Msf() {
           data-input-counter-min="1"
           data-input-counter-max="50"
           aria-describedby="helper-text-explanation"
-          className="block w-full pb-6 text-sm font-medium text-center text-gray-900 outline-none border-y-2 border-y-gray-300 border-x-2 border-x-gray-50 dark:border-x-gray-700 h-11 bg-gray-50 dark:bg-gray-700 dark:text-white focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block w-full pb-4 text-sm font-medium text-center text-gray-900 outline-none border-y-2 border-y-gray-300 border-x-2 border-x-gray-50 dark:border-x-gray-700 h-11 bg-gray-50 dark:bg-gray-700 dark:text-white focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder=""
           defaultValue="5"
           value={pageNum}
