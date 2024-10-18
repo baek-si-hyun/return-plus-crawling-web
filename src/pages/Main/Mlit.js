@@ -51,9 +51,8 @@ function Mlit() {
       // 날짜를 "YYYY-MM-DD" 형식으로 변환 또는 빈 문자열 전달
       const apiStartDate = startDate ? formatDate(startDate) : "";
       const apiEndDate = endDate ? formatDate(endDate) : "";
-
       const response = await fetch(
-        `http://127.0.0.1:8000/mlit?search_keyword=${encodeURIComponent(
+        `http://ec2-54-205-189-223.compute-1.amazonaws.com:8888/mlit/?search_keyword=${encodeURIComponent(
           searchKeyword
         )}&search_regdate_s=${encodeURIComponent(
           apiStartDate
@@ -105,7 +104,7 @@ function Mlit() {
           filename: customFilename,
           search_keyword: searchKeyword,
           search_regdate_s: apiStartDate, // 추가: 시작 날짜
-          search_regdate_e: apiEndDate,   // 추가: 종료 날짜
+          search_regdate_e: apiEndDate, // 추가: 종료 날짜
           download_time: new Date().toISOString(),
           data_count: parseInt(dataCount, 10), // 크롤링한 데이터 수 추가
         };

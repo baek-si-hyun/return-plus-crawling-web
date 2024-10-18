@@ -52,7 +52,7 @@ function Seoul() {
       const apiEndDate = endDate ? formatDate(endDate) : "";
 
       const response = await fetch(
-        `http://127.0.0.1:8000/seoul?search_keyword=${encodeURIComponent(
+        `http://ec2-54-205-189-223.compute-1.amazonaws.com:8888/seoul/?search_keyword=${encodeURIComponent(
           searchKeyword
         )}&search_regdate_s=${encodeURIComponent(
           apiStartDate
