@@ -52,7 +52,7 @@ function Mlit() {
       const apiStartDate = startDate ? formatDate(startDate) : "";
       const apiEndDate = endDate ? formatDate(endDate) : "";
       const response = await fetch(
-        `http://ec2-54-205-189-223.compute-1.amazonaws.com:8888/mlit/?search_keyword=${encodeURIComponent(
+        `https://returnplus.kr:8888/mlit/?search_keyword=${encodeURIComponent(
           searchKeyword
         )}&search_regdate_s=${encodeURIComponent(
           apiStartDate

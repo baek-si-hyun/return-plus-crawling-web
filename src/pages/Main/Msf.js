@@ -92,7 +92,7 @@ function Msf() {
 
     try {
       const response = await fetch(
-        `http://ec2-54-205-189-223.compute-1.amazonaws.com:8888/msf/?search_keyword=${encodeURIComponent(
+        `https://returnplus.kr:8888/msf/?search_keyword=${encodeURIComponent(
           searchKeyword
         )}&select_page_num=${encodeURIComponent(pageNum)}`
       );
