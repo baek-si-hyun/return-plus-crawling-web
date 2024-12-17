@@ -1,0 +1,35 @@
+.nav {
+  display: flex;
+  position: fixed;
+  padding: 2.5rem 3rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      width: 2rem;
+      height: 2rem;
+      background: none;
+      border: none;
+      padding: 0px;
+      border-radius: 0.2rem;
+      svg {
+        min-width: 40px;
+        min-height: 40px;
+  
+      }
+    }
+  }
+}
